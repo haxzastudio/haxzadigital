@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-haxza-primary: #04190f; /* Deep Dark Green */
+  --color-haxza-accent: #238636;  /* GitHub Green */
+  --color-haxza-bg: #010409;       /* Deepest Black-Green */
+  --color-haxza-card: #0d1117;    /* GitHub Main Background */
+  --color-haxza-light: #020804;   /* Very Dark Green, almost black */
+  --color-haxza-border: #d0d7de;   /* Professional Light Border */
+}
+
+@layer utilities {
+  .mask-radial {
+    mask-image: radial-gradient(circle, black, transparent);
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-haxza-bg text-[#e6edf3] antialiased selection:bg-haxza-accent selection:text-white;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight text-white;
+  }
+}
