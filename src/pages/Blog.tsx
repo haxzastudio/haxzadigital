@@ -12,7 +12,7 @@ export default function Blog() {
   const post = blogPosts.find(p => p.slug === slug);
 
   // SEO configuration
-  const siteUrl = "https://haxza.com"; // Consider making this dynamic if needed
+  const siteUrl = "https://www.haxzadigital.com.br"; // Consider making this dynamic if needed
   const canonicalUrl = `${siteUrl}${pathname}`;
   
   const seoData = post ? {
@@ -56,11 +56,13 @@ export default function Blog() {
         <meta property="og:type" content={seoData.type} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Haxza Digital Intelligence" />
+        <meta property="og:image" content={`${siteUrl}/favicon.png`} />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
+        <meta name="twitter:image" content={`${siteUrl}/favicon.png`} />
       </Helmet>
 
       <div className="bg-haxza-bg text-white">

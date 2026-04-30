@@ -57,11 +57,13 @@ export default function Landing() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Haxza Digital Intelligence" />
+        <meta property="og:image" content={`${siteUrl}/favicon.png`} />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Haxza | Digital Intelligence" />
         <meta name="twitter:description" content="Sistemas inteligentes para colocar sua empresa no topo do Google e automatizar seu atendimento." />
+        <meta name="twitter:image" content={`${siteUrl}/favicon.png`} />
       </Helmet>
 
       {/* GitHub-style Gradient Glows */}
@@ -154,7 +156,7 @@ export default function Landing() {
                 <div className="flex -space-x-4">
                   {[1, 2, 3, 4].map(i => (
                     <div key={i} className="w-14 h-14 rounded-full border-4 border-[#010409] bg-haxza-card overflow-hidden shadow-2xl">
-                      <img src={`https://i.pravatar.cc/100?u=${i*33}`} alt="User" referrerPolicy="no-referrer" loading="lazy" />
+                      <img src={`https://i.pravatar.cc/100?u=${i*33}`} alt="Foto de perfil de um cliente satisfeito com os serviços da Haxza" referrerPolicy="no-referrer" loading="lazy" />
                     </div>
                   ))}
                 </div>
