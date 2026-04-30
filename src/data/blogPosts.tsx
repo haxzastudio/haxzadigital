@@ -10,6 +10,7 @@ export interface BlogPost {
   readingTime: string;
   content: React.ReactNode;
   icon: any;
+  image: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -25,6 +26,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "10 min",
     icon: MessageCircle,
+    image: "/assets/blog/whatsapp.png",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
@@ -99,6 +101,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "8 min",
     icon: Stethoscope,
+    image: "/assets/blog/dentist.png",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
@@ -164,6 +167,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "9 min",
     icon: Calendar,
+    image: "/assets/blog/scheduling.png",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
@@ -230,6 +234,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "11 min",
     icon: Sparkles,
+    image: "/assets/blog/aesthetics.png",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
@@ -293,6 +298,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "12 min",
     icon: Layout,
+    image: "/assets/blog/crm.png",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
