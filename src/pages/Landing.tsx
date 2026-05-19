@@ -54,14 +54,14 @@ export default function Landing() {
   return (
     <div ref={containerRef} className="min-h-screen bg-haxza-bg text-[#e6edf3] font-sans selection:bg-haxza-accent/20 scroll-smooth relative">
       <Helmet>
-        <title>Haxza | Digital Intelligence - Site + Captação de Clientes 24h</title>
-        <meta name="description" content="A Haxza cria sistemas de captação automática de clientes do Google. Sites de alta conversão e automação de vendas para negócios que buscam escala." />
-        <meta name="keywords" content="marketing digital, captação de clientes, google ads, automação de vendas, site para dentista, site para estetica, haxza" />
+        <title>Haxza Digital | Criação de Sites e Sistemas de Captação 24h</title>
+        <meta name="description" content="Agência especializada em Criação de Sites de Alta Conversão, Sistemas de Captação de Clientes e CRM. Automatize seu atendimento e pare de perder vendas." />
+        <meta name="keywords" content="criação de sites, agencia de criacao de sites, desenvolvimento web, sistema de captação de clientes, funil de vendas, automação de whatsapp, crm, haxza digital, sites de alta conversão" />
         <link rel="canonical" href={canonicalUrl} />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Haxza | Digital Intelligence - Captação de Clientes 24h" />
-        <meta property="og:description" content="Sistemas inteligentes para colocar sua empresa no topo do Google e automatizar seu atendimento." />
+        <meta property="og:title" content="Haxza Digital | Criação de Sites Premium e Captação" />
+        <meta property="og:description" content="Sistemas de captação inteligentes para colocar sua empresa no topo do Google e criar sites de altíssima conversão." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:site_name" content="Haxza Digital Intelligence" />
@@ -69,8 +69,8 @@ export default function Landing() {
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Haxza | Digital Intelligence" />
-        <meta name="twitter:description" content="Sistemas inteligentes para colocar sua empresa no topo do Google e automatizar seu atendimento." />
+        <meta name="twitter:title" content="Haxza Digital | Criação de Sites Premium" />
+        <meta name="twitter:description" content="Escale seu negócio com sites focados em conversão e automação." />
         <meta name="twitter:image" content={`${siteUrl}/favicon.png`} />
 
         {/* JSON-LD Schema Markup para Negócio Local / Agência */}
@@ -81,7 +81,7 @@ export default function Landing() {
             "name": "Haxza Digital Intelligence",
             "url": siteUrl,
             "logo": `${siteUrl}/favicon.png`,
-            "description": "A Haxza cria sistemas de captação automática de clientes do Google. Sites de alta conversão e automação de vendas para negócios que buscam escala.",
+            "description": "Agência especializada em Criação de Sites de Alta Conversão, Desenvolvimento Web e Sistemas de Captação automática de clientes.",
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "BR"

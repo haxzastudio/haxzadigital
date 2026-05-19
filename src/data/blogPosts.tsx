@@ -349,53 +349,7 @@ export const blogPosts: BlogPost[] = [
       </>
     )
   },
-  {
-    slug: "trafego-pago-para-medicos-e-clinicas",
-    category: "Marketing Médico",
-    title: "Tráfego Pago para Médicos e Clínicas",
-    desc: "Aprenda como atrair pacientes particulares todos os dias usando anúncios no Google sem ferir as regras do CFM.",
-    titleDisplay: (
-      <>
-        Tráfego Pago <br /> para <span className="text-haxza-accent">Médicos</span> <br /> e Clínicas
-      </>
-    ),
-    readingTime: "15 min",
-    icon: Zap,
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2000&auto=format&fit=crop",
-    content: (
-      <>
-        <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
-          Se você é médico, sabe que depender apenas de indicação e planos de saúde é um risco para o faturamento da clínica. A previsibilidade de pacientes particulares está no tráfego pago bem estruturado.
-        </p>
 
-        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">Por que Médicos precisam do Google Ads?</h2>
-        <p className="text-lg lg:text-xl mb-8">
-          Diferente de quem compra uma roupa por impulso no Instagram, quem busca um médico possui uma "dor" imediata. Se alguém pesquisa "Clínica de Cardiologia perto de mim", ela não quer ver fotos, ela quer marcar uma consulta. O Google Ads captura essa intenção cirurgicamente.
-        </p>
-
-        <h3 className="text-2xl lg:text-3xl mt-16 mb-6 font-bold text-zinc-900">A Regra de Ouro do CFM</h3>
-        <p className="text-lg lg:text-xl mb-8">
-          Muitos médicos têm medo de fazer anúncios devido às rígidas regras do Conselho Federal de Medicina. No entanto, anunciar no Google é a forma mais segura, ética e passiva de fazer marketing. Você não está "oferecendo" nada, está apenas "se colocando à disposição" de quem procurou por sua especialidade.
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-8 my-16">
-          <div className="p-8 border border-zinc-100 rounded-3xl bg-zinc-50">
-            <h5 className="font-bold text-lg mb-2">Google Ads (Intenção)</h5>
-            <p className="text-zinc-500 text-sm">Excelente para captar pacientes com problemas específicos que buscam ativamente por tratamento.</p>
-          </div>
-          <div className="p-8 border border-zinc-100 rounded-3xl bg-zinc-50">
-            <h5 className="font-bold text-lg mb-2">Meta Ads (Reconhecimento)</h5>
-            <p className="text-zinc-500 text-sm">Ótimo para procedimentos eletivos (Estética Médica) e construção de marca institucional.</p>
-          </div>
-        </div>
-
-        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">A Estrutura de Captação Perfeita</h2>
-        <p className="text-lg lg:text-xl mb-8">
-          Fazer anúncios sem um bom site é como convidar alguém para jantar e estar com a casa suja. A Haxza Digital cria sistemas de captação completos: Anúncio validado + Página de alta conversão + Automação de agendamento no WhatsApp.
-        </p>
-      </>
-    )
-  },
   {
     slug: "como-conseguir-clientes-pelo-google-todos-os-dias",
     category: "Dominação de Mercado",
