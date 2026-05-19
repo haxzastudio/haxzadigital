@@ -35,4 +35,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.haxzadigital.com.br/blog/trafego-pago-para-medicos-e-clinicas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.haxzadigital.com.br/blog/como-conseguir-clientes-pelo-google-todos-os-dias</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

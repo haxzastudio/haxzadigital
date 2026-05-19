@@ -63,6 +63,30 @@ export default function Blog() {
         <meta name="twitter:title" content={seoData.title} />
         <meta name="twitter:description" content={seoData.description} />
         <meta name="twitter:image" content={`${siteUrl}/favicon.png`} />
+
+        {/* JSON-LD Schema Markup */}
+        <script type="application/ld+json">
+          {JSON.stringify(
+            post ? {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": post.title,
+              "image": [`${siteUrl}${post.image}`],
+              "datePublished": new Date().toISOString(), // Idealmente viria do post
+              "author": [{
+                  "@type": "Organization",
+                  "name": "Haxza Digital Intelligence",
+                  "url": siteUrl
+              }]
+            } : {
+              "@context": "https://schema.org",
+              "@type": "Blog",
+              "name": seoData.title,
+              "description": seoData.description,
+              "url": canonicalUrl
+            }
+          )}
+        </script>
       </Helmet>
 
       <div className="bg-haxza-bg text-white">
@@ -83,7 +107,7 @@ export default function Blog() {
                 </span>
               </div>
               <h1 className="text-6xl lg:text-8xl font-black leading-[0.85] tracking-tighter text-zinc-900 font-display uppercase italic text-balance">
-                Haxza <span className="text-haxza-accent">Journal</span>
+                Haxza <span className="text-haxza-accent">Jornal</span>
               </h1>
             </div>
             <p className="text-lg lg:text-xl text-zinc-600 max-w-md font-medium leading-snug text-right hidden md:block">
@@ -98,8 +122,8 @@ export default function Blog() {
               return (
                 <div className="lg:col-span-8 group relative cursor-pointer">
                   <Link to={`/blog/${item.slug}`} className="no-underline block h-full">
-                    <div className="relative w-full aspect-[16/10] overflow-hidden bg-zinc-900 mb-6">
-                      <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" />
+                    <div className="relative w-full aspect-[16/10] overflow-hidden bg-zinc-900 mb-6 rounded-3xl">
+                      <img src={item.image} alt={item.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                       
                       <div className="absolute bottom-0 left-0 p-8 lg:p-12 w-full">
@@ -121,7 +145,7 @@ export default function Blog() {
 
             {/* Sidebar Posts */}
             <div className="lg:col-span-4 flex flex-col gap-8">
-              <div className="flex items-center gap-3 border-b-2 border-zinc-900 pb-3 mb-2">
+              <div className="flex items-center gap-3 border-b-2 border-zinc-200 pb-3 mb-2">
                 <div className="w-2 h-2 bg-haxza-accent" />
                 <h4 className="text-sm font-black uppercase tracking-[0.2em] text-zinc-900">Últimas Análises</h4>
               </div>
@@ -135,8 +159,8 @@ export default function Blog() {
                   className="group border-b border-zinc-200 pb-8 last:border-0"
                 >
                   <Link to={`/blog/${item.slug}`} className="no-underline grid grid-cols-3 gap-6 h-full items-center">
-                    <div className="col-span-1 aspect-square bg-zinc-100 overflow-hidden relative border border-zinc-200/50">
-                       <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <div className="col-span-1 aspect-square bg-zinc-50 overflow-hidden relative border border-zinc-200 rounded-xl">
+                       <img src={item.image} alt={item.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                     </div>
                     <div className="col-span-2 flex flex-col justify-center">
                       <span className="text-[9px] font-black uppercase tracking-[0.2em] text-haxza-accent mb-2">
@@ -157,13 +181,13 @@ export default function Blog() {
 
           {/* Bottom Posts Grid */}
           {blogPosts.length > 4 && (
-            <div className="mt-16 pt-16 border-t-4 border-zinc-900">
+            <div className="mt-16 pt-16 border-t-4 border-zinc-200">
               <div className="grid md:grid-cols-3 gap-10">
                 {blogPosts.slice(4).map((item, i) => (
                    <motion.div key={item.slug} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="group">
-                     <Link to={`/blog/${item.slug}`} className="no-underline flex flex-col gap-6">
-                        <div className="w-full aspect-[16/9] overflow-hidden bg-zinc-100">
-                          <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                      <Link to={`/blog/${item.slug}`} className="no-underline flex flex-col gap-6">
+                        <div className="w-full aspect-[16/9] overflow-hidden bg-zinc-50 border border-zinc-200 rounded-2xl">
+                          <img src={item.image} alt={item.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                         </div>
                         <div>
                           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 mb-3 block">
@@ -190,12 +214,12 @@ export default function Blog() {
                 Sistemas automatizados de captação para empresas que não podem perder leads.
               </p>
             </div>
-            <a 
-              href="https://wa.me/5511969454854?text=Ol%C3%A1%20Haxza%2C%20li%20o%20Journal%20e%20quero%20escalar%20meu%20lucro" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="relative z-10 whitespace-nowrap inline-flex items-center gap-4 px-10 py-6 bg-haxza-accent text-white font-black text-lg hover:bg-emerald-500 transition-all uppercase tracking-widest no-underline shadow-[0_20px_40px_rgba(35,134,54,0.3)] hover:scale-105 active:scale-95"
-            >
+              <a 
+                href="https://wa.me/5511969454854?text=Ol%C3%A1%20Haxza%2C%20li%20o%20Jornal%20e%20quero%20escalar%20meu%20lucro" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="relative z-10 whitespace-nowrap inline-flex items-center gap-4 px-10 py-6 bg-[#25D366] text-white font-black text-lg hover:bg-[#1ebd5c] transition-all uppercase tracking-widest no-underline shadow-[0_20px_40px_rgba(37,211,102,0.3)] hover:scale-105 active:scale-95"
+              >
               Ativar Haxza <Send className="w-5 h-5 fill-current" />
             </a>
           </section>
@@ -204,12 +228,12 @@ export default function Blog() {
         <main className="w-full bg-white">
           {/* Article Hero Header */}
           <div className="w-full bg-zinc-950 relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden flex items-end min-h-[60vh]">
-            <img src={post.image} alt={post.title} className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
+            <img src={post.image} alt={post.title} loading="eager" className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent" />
             
             <div className="max-w-[1000px] mx-auto px-6 w-full relative z-10">
               <Link to="/blog" className="inline-flex items-center gap-3 text-zinc-400 text-[10px] font-black uppercase tracking-[0.4em] hover:text-white transition-colors no-underline group mb-12">
-                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Voltar ao Journal
+                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Voltar ao Jornal
               </Link>
 
               <div className="inline-flex items-center gap-4 mb-8">
@@ -238,8 +262,8 @@ export default function Blog() {
           </div>
   
           {/* Article Body */}
-          <article className="max-w-[800px] mx-auto px-6 py-20 lg:py-24">
-            <div className="prose prose-zinc prose-lg lg:prose-xl max-w-none text-zinc-800 font-serif leading-relaxed prose-headings:font-sans prose-headings:text-zinc-950 prose-headings:font-black prose-headings:font-display prose-headings:tracking-tighter prose-headings:uppercase prose-headings:italic prose-p:mb-8 prose-strong:text-zinc-950 prose-strong:font-bold prose-strong:bg-haxza-accent/10 prose-strong:px-1 prose-a:text-haxza-accent prose-a:font-black prose-a:no-underline hover:prose-a:underline">
+          <article className="max-w-[800px] mx-auto px-6 py-16 lg:py-20">
+            <div className="text-zinc-800 text-lg lg:text-xl leading-normal tracking-normal font-sans [&_h2]:text-zinc-950 [&_h4]:text-zinc-950 [&_strong]:text-zinc-950">
               {/* Fake "Dropcap" style for first paragraph if possible, or just standard render */}
               <div className="text-xl lg:text-2xl font-light text-zinc-600 mb-12 leading-relaxed border-l-4 border-haxza-accent pl-6 italic">
                 {post.desc}
@@ -249,7 +273,7 @@ export default function Blog() {
             </div>
   
             {/* Share / Tags */}
-            <div className="mt-20 pt-8 border-t-2 border-zinc-900 flex items-center justify-between">
+            <div className="mt-20 pt-8 border-t-2 border-zinc-200 flex items-center justify-between">
                <div className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500">
                  Tags: <span className="text-zinc-900">{post.category}, Estratégia, Conversão</span>
                </div>
@@ -267,7 +291,7 @@ export default function Blog() {
                   href="https://wa.me/5511969454854?text=Ol%C3%A1%20Haxza%2C%20li%20a%20not%C3%ADcia%20e%20quero%20escalar%20meu%20faturamento" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-4 px-10 py-5 bg-haxza-accent text-white font-black text-lg hover:bg-emerald-500 transition-all uppercase tracking-widest no-underline shadow-[0_20px_40px_rgba(35,134,54,0.3)] hover:scale-105 active:scale-[0.98]"
+                  className="inline-flex items-center gap-4 px-10 py-5 bg-[#25D366] text-white font-black text-lg hover:bg-[#1ebd5c] transition-all uppercase tracking-widest no-underline shadow-[0_20px_40px_rgba(37,211,102,0.3)] hover:scale-105 active:scale-[0.98]"
                 >
                   Ativar Automação <Send className="w-5 h-5 fill-current" /> 
                 </a>
@@ -276,15 +300,15 @@ export default function Blog() {
 
             {/* Related Posts */}
             <div className="mt-32">
-              <div className="flex items-center gap-4 mb-12 border-b-2 border-zinc-900 pb-4">
+              <div className="flex items-center gap-4 mb-12 border-b-2 border-zinc-200 pb-4">
                 <div className="w-3 h-3 bg-haxza-accent" />
                 <h4 className="text-2xl font-black uppercase italic tracking-tighter text-zinc-900">Leia a Seguir</h4>
               </div>
               <div className="grid md:grid-cols-2 gap-10">
                 {relatedPosts.map(rp => (
                   <Link key={rp.slug} to={`/blog/${rp.slug}`} className="group no-underline flex flex-col gap-4">
-                    <div className="aspect-[16/9] overflow-hidden bg-zinc-100 border border-zinc-200">
-                      <img src={rp.image} alt={rp.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="aspect-[16/9] overflow-hidden bg-zinc-50 border border-zinc-200 rounded-2xl">
+                      <img src={rp.image} alt={rp.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
                     <div>
                       <span className="text-[9px] font-black uppercase tracking-[0.2em] text-haxza-accent block mb-2">{rp.category}</span>
@@ -301,9 +325,9 @@ export default function Blog() {
       )}
 
       {/* Footer */}
-      <footer className="w-full max-w-[1400px] mx-auto px-6 lg:px-20 py-24 flex flex-col md:flex-row justify-between items-center gap-12 text-[10px] text-zinc-500 font-bold uppercase tracking-[0.4em]">
+      <footer className="w-full max-w-[1400px] mx-auto px-6 lg:px-20 py-24 flex flex-col md:flex-row justify-between items-center gap-12 text-[10px] text-zinc-400 font-bold uppercase tracking-[0.4em]">
         <div className="flex items-center gap-4">
-          <Link to="/" className="text-zinc-900 tracking-tighter text-2xl font-display no-underline">HAXZA</Link>
+          <Link to="/" className="text-zinc-900 tracking-tighter text-2xl font-display no-underline">HAXZA DIGITAL</Link>
           <span className="opacity-10">|</span>
           <span>© {new Date().getFullYear()} Digital Solutions</span>
         </div>

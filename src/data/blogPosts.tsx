@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "10 min",
     icon: MessageCircle,
-    image: "/assets/blog/whatsapp.png",
+    image: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=2000&auto=format&fit=crop",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "8 min",
     icon: Stethoscope,
-    image: "/assets/blog/dentist.png",
+    image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2000&auto=format&fit=crop",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
@@ -167,7 +167,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "9 min",
     icon: Calendar,
-    image: "/assets/blog/scheduling.png",
+    image: "https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2000&auto=format&fit=crop",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
@@ -234,7 +234,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "11 min",
     icon: Sparkles,
-    image: "/assets/blog/aesthetics.png",
+    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2000&auto=format&fit=crop",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
@@ -298,7 +298,7 @@ export const blogPosts: BlogPost[] = [
     ),
     readingTime: "12 min",
     icon: Layout,
-    image: "/assets/blog/crm.png",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop",
     content: (
       <>
         <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
@@ -346,6 +346,125 @@ export const blogPosts: BlogPost[] = [
         <p className="text-lg lg:text-xl mb-8">
           Pare de ser refém da sorte ou da memória da recepção. Tenha uma empresa profissional e escalável com dados reais.
         </p>
+      </>
+    )
+  },
+  {
+    slug: "trafego-pago-para-medicos-e-clinicas",
+    category: "Marketing Médico",
+    title: "Tráfego Pago para Médicos e Clínicas",
+    desc: "Aprenda como atrair pacientes particulares todos os dias usando anúncios no Google sem ferir as regras do CFM.",
+    titleDisplay: (
+      <>
+        Tráfego Pago <br /> para <span className="text-haxza-accent">Médicos</span> <br /> e Clínicas
+      </>
+    ),
+    readingTime: "15 min",
+    icon: Zap,
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2000&auto=format&fit=crop",
+    content: (
+      <>
+        <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
+          Se você é médico, sabe que depender apenas de indicação e planos de saúde é um risco para o faturamento da clínica. A previsibilidade de pacientes particulares está no tráfego pago bem estruturado.
+        </p>
+
+        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">Por que Médicos precisam do Google Ads?</h2>
+        <p className="text-lg lg:text-xl mb-8">
+          Diferente de quem compra uma roupa por impulso no Instagram, quem busca um médico possui uma "dor" imediata. Se alguém pesquisa "Clínica de Cardiologia perto de mim", ela não quer ver fotos, ela quer marcar uma consulta. O Google Ads captura essa intenção cirurgicamente.
+        </p>
+
+        <h3 className="text-2xl lg:text-3xl mt-16 mb-6 font-bold text-zinc-900">A Regra de Ouro do CFM</h3>
+        <p className="text-lg lg:text-xl mb-8">
+          Muitos médicos têm medo de fazer anúncios devido às rígidas regras do Conselho Federal de Medicina. No entanto, anunciar no Google é a forma mais segura, ética e passiva de fazer marketing. Você não está "oferecendo" nada, está apenas "se colocando à disposição" de quem procurou por sua especialidade.
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8 my-16">
+          <div className="p-8 border border-zinc-100 rounded-3xl bg-zinc-50">
+            <h5 className="font-bold text-lg mb-2">Google Ads (Intenção)</h5>
+            <p className="text-zinc-500 text-sm">Excelente para captar pacientes com problemas específicos que buscam ativamente por tratamento.</p>
+          </div>
+          <div className="p-8 border border-zinc-100 rounded-3xl bg-zinc-50">
+            <h5 className="font-bold text-lg mb-2">Meta Ads (Reconhecimento)</h5>
+            <p className="text-zinc-500 text-sm">Ótimo para procedimentos eletivos (Estética Médica) e construção de marca institucional.</p>
+          </div>
+        </div>
+
+        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">A Estrutura de Captação Perfeita</h2>
+        <p className="text-lg lg:text-xl mb-8">
+          Fazer anúncios sem um bom site é como convidar alguém para jantar e estar com a casa suja. A Haxza Digital cria sistemas de captação completos: Anúncio validado + Página de alta conversão + Automação de agendamento no WhatsApp.
+        </p>
+      </>
+    )
+  },
+  {
+    slug: "como-conseguir-clientes-pelo-google-todos-os-dias",
+    category: "Dominação de Mercado",
+    title: "Como conseguir clientes pelo Google todos os dias",
+    desc: "Descubra o erro que faz seus concorrentes roubarem suas vendas e como o sistema Agenda Blindada transforma visitantes em contatos automaticamente.",
+    titleDisplay: (
+      <>
+        Como Conseguir <br /> <span className="text-haxza-accent">Clientes pelo Google</span> <br /> Todos os Dias
+      </>
+    ),
+    readingTime: "14 min",
+    icon: Zap,
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000&auto=format&fit=crop",
+    content: (
+      <>
+        <p className="text-2xl lg:text-3xl text-zinc-800 font-medium mb-12 leading-snug">
+          Onde o seu cliente procura quando tem um problema urgente para resolver? Exatamente: no Google. Se a sua empresa não aparece lá, ela simplesmente não existe para a parcela mais quente do mercado.
+        </p>
+
+        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">Por que empresas continuam invisíveis no Google</h2>
+        <p className="text-lg lg:text-xl mb-8">
+          Muitos empresários acreditam que "ter um site antigo" ou "ter uma conta no Instagram" é suficiente. A verdade é que o algoritmo do Google prioriza relevância, velocidade e estrutura profissional. Empresas ficam invisíveis porque tratam seu site como um panfleto estático e não como uma máquina de vendas ativa.
+        </p>
+
+        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">O erro que faz seus concorrentes receberem seus clientes</h2>
+        <p className="text-lg lg:text-xl mb-8">
+          Você já procurou pelo seu próprio serviço no Google? Se o nome do seu concorrente apareceu antes do seu, você está perdendo dinheiro neste exato milissegundo. O maior erro é depender da "sorte" ou da "busca orgânica lenta". O seu concorrente não é necessariamente melhor do que você, ele apenas <strong>comprou a atenção</strong> de quem já quer comprar.
+        </p>
+
+        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">Como aparecer quando alguém pesquisa seu serviço</h2>
+        <p className="text-lg lg:text-xl mb-8">
+          O segredo se chama Intenção de Busca. Através do Google Ads (Rede de Pesquisa), nós configuramos o seu sistema para ser disparado APENAS quando alguém digitar exatamente o serviço que você oferece, na sua cidade.
+        </p>
+        <div className="p-8 border border-zinc-100 rounded-3xl bg-zinc-50 my-12">
+           <h4 className="font-bold text-xl mb-4 text-haxza-accent">A Diferença Brutal:</h4>
+           <ul className="space-y-4 text-lg text-zinc-600">
+             <li>❌ <strong>Mídia Tradicional:</strong> Você grita para 10.000 pessoas torcendo para 1 estar interessada.</li>
+             <li>✅ <strong>Estratégia Haxza:</strong> Você aparece silenciosamente em 1º lugar para as únicas 50 pessoas que acordaram decididas a comprar o seu produto hoje.</li>
+           </ul>
+        </div>
+
+        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">Por que só Instagram não é suficiente</h2>
+        <p className="text-lg lg:text-xl mb-8">
+          O Instagram é a rede da distração. As pessoas entram lá para ver amigos, memes e fofocas. Anunciar lá é tentar interromper alguém para vender. O Google é a rede da <strong>intenção</strong>. As pessoas entram lá prontas para passar o cartão. Depender só do Instagram é ter uma empresa vulnerável a bloqueios e algoritmos instáveis.
+        </p>
+
+        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">Como transformar visitantes em contatos automaticamente</h2>
+        <p className="text-lg lg:text-xl mb-8">
+          Receber o clique não é o fim, é apenas o começo. Se o visitante cai em um site confuso, ele volta para o Google. Nós construímos Páginas de Alta Conversão que educam, geram autoridade e removem fricções. Em 3 cliques, os dados do cliente saem do site direto para o WhatsApp do seu comercial, classificados por interesse.
+        </p>
+
+        <h2 className="text-3xl lg:text-5xl mt-24 mb-10 uppercase italic">O sistema Agenda Blindada 24h</h2>
+        <p className="text-lg lg:text-xl mb-8">
+          Imagine ter um sistema que capta, filtra e qualifica contatos de domingo a domingo. O Sistema Agenda Blindada 24h une Google Ads, Funil de Qualificação Visual e CRM Integrado. É a solução definitiva para prestadores de serviços e clínicas que querem previsibilidade absoluta de faturamento.
+        </p>
+
+        <div className="mt-16 mb-8 text-center p-12 bg-zinc-950 rounded-[3rem] shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-2 bg-haxza-accent" />
+          <h4 className="text-3xl lg:text-4xl font-black text-white mb-6 uppercase italic">Pare de perder clientes agora.</h4>
+          <p className="text-lg text-zinc-400 mb-10 max-w-2xl mx-auto">Descubra quanto dinheiro sua empresa está deixando na mesa. Faça uma análise da sua estrutura atual conosco.</p>
+          <a 
+            href="https://wa.me/5511969454854?text=Ol%C3%A1%20Haxza%2C%20quero%20receber%20um%20diagn%C3%B3stico%20da%20minha%20empresa" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="inline-flex items-center gap-3 px-8 py-5 bg-haxza-accent text-white font-black text-lg hover:bg-emerald-500 transition-all uppercase tracking-widest rounded-xl shadow-[0_20px_40px_rgba(35,134,54,0.3)] hover:-translate-y-1 no-underline"
+          >
+            Receber Diagnóstico Gratuito
+          </a>
+        </div>
       </>
     )
   }
