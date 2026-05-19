@@ -60,12 +60,12 @@ export const blogPosts: BlogPost[] = [
           <h4 className="text-2xl font-black mb-8 uppercase tracking-tighter">O Fluxo que Gera Escala:</h4>
           <div className="grid md:grid-cols-2 gap-10">
             <div className="space-y-4">
-              <div className="w-10 h-10 bg-haxza-bg text-white rounded-lg flex items-center justify-center font-display font-black text-sm">A</div>
+              <div className="w-10 h-10 bg-haxza-accent text-white rounded-lg flex items-center justify-center font-display font-black text-sm">A</div>
               <h5 className="font-bold text-xl">LPs de Qualificação</h5>
               <p className="text-zinc-500 text-base">O cliente passa por uma página ultra-rápida que filtra intenção, orçamento e dor principal antes de chegar no seu consultor.</p>
             </div>
             <div className="space-y-4">
-              <div className="w-10 h-10 bg-haxza-bg text-white rounded-lg flex items-center justify-center font-display font-black text-sm">B</div>
+              <div className="w-10 h-10 bg-haxza-accent text-white rounded-lg flex items-center justify-center font-display font-black text-sm">B</div>
               <h5 className="font-bold text-xl">Aquecimento Automático</h5>
               <p className="text-zinc-500 text-base">Antes de falar com o humano, o sistema já enviou provas sociais, vídeos explicativos e tirou dúvidas frequentes.</p>
             </div>
@@ -142,8 +142,8 @@ export const blogPosts: BlogPost[] = [
           <li className="flex items-start gap-4 text-xl"><span className="text-haxza-accent font-black">✓</span> <strong>Filtro de Procedimento:</strong> Direcione o paciente para o especialista certo antes mesmo dele mandar mensagem.</li>
         </ul>
 
-        <div className="p-12 bg-zinc-900 rounded-[3rem] text-white my-16">
-          <h4 className="text-2xl font-black mb-6 uppercase tracking-tighter">Impacto na Agenda</h4>
+        <div className="p-12 bg-zinc-900 rounded-[3rem] text-white my-16 border-l-8 border-haxza-accent">
+          <h4 className="text-2xl font-black mb-6 uppercase tracking-tighter text-haxza-accent">Impacto na Agenda</h4>
           <p className="text-zinc-400 text-lg italic">"Antes o site era um custo. Com a Haxza, ele se tornou nosso principal canal de captação de pacientes de implantes. A qualidade visual atrai quem não está preocupado apenas com preço."</p>
           <span className="block mt-6 text-haxza-accent font-black text-xs uppercase">— Dr. Arnaldo, Reabilitação Oral</span>
         </div>
@@ -252,12 +252,12 @@ export const blogPosts: BlogPost[] = [
         </p>
 
         <div className="my-16 grid lg:grid-cols-2 gap-10">
-          <div className="p-10 bg-zinc-950 rounded-[3rem] text-white">
-            <h5 className="text-haxza-accent font-black uppercase text-xs mb-6 tracking-widest">Cenário Comum</h5>
+          <div className="p-10 bg-zinc-950 rounded-[3rem] text-white border-l-4 border-red-500">
+            <h5 className="text-red-400 font-black uppercase text-xs mb-6 tracking-widest">Cenário Comum</h5>
             <p className="text-lg font-light italic">"Lead chega frio → Pergunta preço → Acha caro → Desaparece. Sua clínica vira um leilão."</p>
           </div>
-          <div className="p-10 bg-haxza-accent rounded-[3rem] text-white">
-             <h5 className="text-white/40 font-black uppercase text-xs mb-6 tracking-widest">Cenário Haxza</h5>
+          <div className="p-10 bg-haxza-accent rounded-[3rem] text-white border-l-4 border-white/40">
+             <h5 className="text-white font-black uppercase text-xs mb-6 tracking-widest">Cenário Haxza</h5>
              <p className="text-lg font-bold italic">"Lead passa por LP Premium → Entende os benefícios → Vê resultados → Chega qualificado para fechar."</p>
           </div>
         </div>

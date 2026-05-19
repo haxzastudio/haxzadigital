@@ -263,7 +263,7 @@ export default function Blog() {
   
           {/* Article Body */}
           <article className="max-w-[800px] mx-auto px-6 py-16 lg:py-20">
-            <div className="text-zinc-800 text-lg lg:text-xl leading-normal tracking-normal font-sans [&_h2]:text-zinc-950 [&_h4]:text-zinc-950 [&_strong]:text-zinc-950">
+            <div className="text-zinc-800 text-lg lg:text-xl leading-normal tracking-normal font-sans [&>h2]:text-zinc-950 [&>h3]:text-zinc-950 [&>h4]:text-zinc-950 [&>p>strong]:text-zinc-950 [&_ul_strong]:text-zinc-950">
               {/* Fake "Dropcap" style for first paragraph if possible, or just standard render */}
               <div className="text-xl lg:text-2xl font-light text-zinc-600 mb-12 leading-relaxed border-l-4 border-haxza-accent pl-6 italic">
                 {post.desc}
